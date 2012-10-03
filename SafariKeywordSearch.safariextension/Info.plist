@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2.3</string>
+	<string>2.2.3w</string>
 	<key>CFBundleVersion</key>
 	<string>16</string>
 	<key>Chrome</key>
@@ -58,8 +58,6 @@
 			<string>All</string>
 		</dict>
 	</dict>
-	<key>Update Manifest URL</key>
-	<string>http://safarikeywordsearch.aurlien.net/manifest.xml</string>
 	<key>Website</key>
 	<string>http://safarikeywordsearch.aurlien.net/</string>
 </dict>

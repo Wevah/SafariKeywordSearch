@@ -135,7 +135,7 @@
 
                 search = search.replace('&', '%26').replace('?', '%3F');
 
-                url = keywordExpansions[key].replace('%%%', search.replace(/ /g, '%20')).replace('@@@', search.replace(/ /g, '+'));
+                url = keywordExpansions[key].replace('%%%', search.replace(/ /g, '%20')).replace('@@@', search.replace(/ /g, '+')).replace('___', search.replace(/ /g, '_'));
 
                 // Handle javascript expansions
                 if (url.match(/^javascript:/)) {

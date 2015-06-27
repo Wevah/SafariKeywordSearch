@@ -110,7 +110,7 @@
             }
         }, false);
 
-        // Use the new beforeSearch event on Safari 6+
+        // Use the new beforeSearch event on Safari >= 6
         if (window.SafariBeforeSearchEvent) {
             safari.application.addEventListener('beforeSearch', function(evt) {
                 var query = evt.query,
@@ -133,7 +133,7 @@
 
                 evt.preventDefault();
 
-                search = search.replace('&', '%26').replace('?', '%3F');
+                search = encodeURIComponent(search)
 
                 var replacements = {
                     '%%%': function(str) {return str.replace(/ /g, '%20');},
@@ -144,7 +144,7 @@
                 url = keywordExpansions[key];
 
                 for (var replacementKey in replacements)
-                url = url.replace(replacementKey, replacements[replacementKey](search));
+                	url = url.replace(replacementKey, replacements[replacementKey](search));
 
                 // Handle javascript expansions
                 if (url.match(/^javascript:/)) {
